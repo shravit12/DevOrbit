@@ -13,7 +13,7 @@ const Navbar = ({ setActiveSection }) => {
   return [
     <nav className="navbar navbar-expand-md text-white fixed-md-top sticky-top" id ="Topbar" onWheel={blockScroll} >
       <div className="container">
-       <Logo></Logo>
+       <Logo  setActiveSection={setActiveSection} ></Logo>
 
         <button
           className="navbar-toggler"
