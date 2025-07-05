@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import Logo from './logo';
+import Logo from './logo.jsx';
 import '../navbarcs.css'
 
 const Navbar = ({ setActiveSection }) => {
