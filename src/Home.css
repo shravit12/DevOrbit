@@ -1,0 +1,34 @@
+/* src/Components/Home.css */
+.home h1,
+.home h2,
+.home h4 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.home .btn-outline-light {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  border: none;
+  color: white;
+
+}
+.home .btn-outline-light:hover{
+    color: black;
+}
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-load {
+  animation: fadeSlideIn 1.2s ease-out forwards; /* <-- 🔥 THIS is key */
+}
+
+.animated-text {
+  opacity: 0; /* Start invisible */
+}

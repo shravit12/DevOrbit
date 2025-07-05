@@ -1,0 +1,11 @@
+/* src/Components/About.css */
+.about h2 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: x-large;
+  color: #020202;
+}
+
+.about ul li {
+  margin-bottom: 10px;
+  color: #020202;
+}

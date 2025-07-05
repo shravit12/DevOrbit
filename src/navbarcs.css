@@ -1,0 +1,31 @@
+.glow-link {
+  position: relative;
+  color: #020202;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.glow-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(5, 5, 5, 0.4) 10%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: scale(0.9);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.glow-link:hover::before {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.glow-link:hover {
+  text-shadow: 0 0 6px #000000, 0 0 12px #0ff, 0 0 18px #0ff;
+  color: #0ff;
+}

@@ -1,0 +1,9 @@
+/* src/Components/Contact.css */
+.contact h2, .contact h5 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.contact a:hover {
+  color: #0dcaf0;
+  text-decoration: underline;
+}

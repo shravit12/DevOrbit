@@ -1,0 +1,31 @@
+
+.contain{
+     font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif ;
+     
+}
+#Topbar{
+      background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  transition: background 0.3s ease; /* Red gradient */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  transition: background 0.3s ease;
+ 
+  top: 0;
+}
+.link-but:hover{
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+ 
+#Mainbar{
+
+    margin-left: 220px !important; /* same as sidebar width */
+  
+}
+}
