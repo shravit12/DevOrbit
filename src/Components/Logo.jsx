@@ -1,6 +1,6 @@
 
 
-const Logo = () =>{
+const Logo = ({ setActiveSection }) =>{
   return[
     <>
   <a
