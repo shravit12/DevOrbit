@@ -1,14 +1,14 @@
-import '../Contact.css'
+import '../Contact.css';
 
-const Contact =()=>{
-return[
-   <div className="contact container py-5">
+const Contact = () => {
+  return (
+    <div className="contact container py-5">
       <h1 className="text-white fw-bold mb-4 text-center">Contact Me</h1>
       <div className="row">
         {/* Contact Info */}
         <div className="col-md-6 mb-4 text-white">
           <h5>Let's connect 👋</h5>
-          <p>Email: <a href="mailto:you@example.com" className="text-info">you@example.com</a></p>
+          <p>Email: <a href="mailto:your@email.com" className="text-info">your@email.com</a></p>
           <p>Location: Your City, Your Country</p>
           <p>
             Follow me:
@@ -21,25 +21,34 @@ return[
 
         {/* Contact Form */}
         <div className="col-md-6">
-          <form className="bg-dark text-white p-4 rounded shadow" action="https://formsubmit.co/el/vusudu" method="POST" >
+          <form
+            className="bg-dark text-white p-4 rounded shadow"
+            action="https://formsubmit.co/el/vusudu"
+            method="POST"
+          >
+            {/* Hidden fields */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
+
             <div className="mb-3">
               <label htmlFor="name" className="form-label">Your Name</label>
-              <input type="text" className="form-control" id="name" name="name" placeholder="Enter name" />
+              <input type="text" className="form-control" id="name" name="name" placeholder="Enter name" required />
             </div>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">Email address</label>
-              <input type="email" name="email" className="form-control" id="email" placeholder="name@example.com" />
+              <input type="email" name="email" className="form-control" id="email" placeholder="name@example.com" required />
             </div>
             <div className="mb-3">
               <label htmlFor="message" className="form-label">Message</label>
-             <textarea className="form-control" id="message" name="message" rows="4" placeholder="Write your message..."></textarea>
-
+              <textarea className="form-control" id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
             </div>
             <button type="submit" className="btn btn-primary">Send Message</button>
           </form>
         </div>
       </div>
     </div>
-]
-}
+  );
+};
+
 export default Contact;
