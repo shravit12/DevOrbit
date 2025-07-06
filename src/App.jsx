@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import './App.css';
 
 import Navbar from './Components/Navbar.jsx';
-import Sidebar from './components/Sidebar.jsx';
+import Sidebar from './Components/Sidebar.jsx';
 import Home from './Components/Home.jsx';
 import About from './Components/About.jsx';
 import Projects from './Components/Projects.jsx';
