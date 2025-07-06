@@ -21,14 +21,14 @@ return[
 
         {/* Contact Form */}
         <div className="col-md-6">
-          <form className="bg-dark text-white p-4 rounded shadow">
+          <form className="bg-dark text-white p-4 rounded shadow" action="https://formsubmit.co/sharmashravit@email.com" method="POST" >
             <div className="mb-3">
               <label htmlFor="name" className="form-label">Your Name</label>
-              <input type="text" className="form-control" id="name" placeholder="Enter name" />
+              <input type="text" className="form-control" id="name" name="name" placeholder="Enter name" />
             </div>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">Email address</label>
-              <input type="email" className="form-control" id="email" placeholder="name@example.com" />
+              <input type="email" name="email" className="form-control" id="email" placeholder="name@example.com" />
             </div>
             <div className="mb-3">
               <label htmlFor="message" className="form-label">Message</label>
