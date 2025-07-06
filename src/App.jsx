@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useState , useEffect } from 'react';
 import './App.css';
-import { useState } from "react"; 
+
 import Navbar from './Components/Navbar.jsx';
 import Sidebar from './Components/Sidebar.jsx';
 import Home from './Components/Home.jsx';
