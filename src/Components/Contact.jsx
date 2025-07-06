@@ -21,7 +21,7 @@ return[
 
         {/* Contact Form */}
         <div className="col-md-6">
-          <form className="bg-dark text-white p-4 rounded shadow" action="https://formsubmit.co/sharmashravit@email.com" method="POST" >
+          <form className="bg-dark text-white p-4 rounded shadow" action="https://formsubmit.co/el/vusudu" method="POST" >
             <div className="mb-3">
               <label htmlFor="name" className="form-label">Your Name</label>
               <input type="text" className="form-control" id="name" name="name" placeholder="Enter name" />
