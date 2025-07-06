@@ -26,6 +26,8 @@ const Contact = () => {
             action="https://formsubmit.co/ee4212e6b3f8fccc5ff82ec50063359b"
             method="POST"
           >
+
+            <input type="hidden" name="_next" value="https://dev-orbit-duxv.vercel.app/" />
             {/* Hidden fields */}
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
