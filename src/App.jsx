@@ -33,7 +33,7 @@ function App() {
         <Navbar />
         <div className="d-flex flex-grow-1">
           <Sidebar />
-          <div style={{ marginLeft: "200px", padding: "20px", width: "100%" }}>
+          <div style={{ marginLeft: window.innerWidth >= 768 && isSidebarVisible ? "200px" : "0px", padding: "20px", width: "100%" }}>
           <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/about" element={<About />} />
