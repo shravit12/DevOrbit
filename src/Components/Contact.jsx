@@ -27,11 +27,10 @@ const Contact = () => {
             method="POST"
           >
 
-            <input type="hidden" name="_next" value="https://dev-orbit-duxv.vercel.app/" />
             {/* Hidden fields */}
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
+            <input type="hidden" name="_next" value="https://dev-orbit-duxv.vercel.app/thank-you" />
 
             <div className="mb-3">
               <label htmlFor="name" className="form-label">Your Name</label>
