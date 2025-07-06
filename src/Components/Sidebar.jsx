@@ -1,6 +1,7 @@
 import { MdDashboard } from "react-icons/md";
 import { IoSettings } from "react-icons/io5";
 import { MdOutlineHelp } from "react-icons/md";
+import { Link } from "react-router-dom";
 const Sidebar = () => {
   const blockScroll = (e) => {
   e.stopPropagation();
@@ -20,9 +21,21 @@ const Sidebar = () => {
 }}  onWheel={blockScroll}>
     
       <ul className="nav flex-column">
-        <li className="nav-item"><a className="nav-link" href="#"style={{color:`#D1D5DB`}}><MdDashboard size={30} /> Dashboard</a></li>
-        <li className="nav-item"><a className="nav-link" href="#"style={{color:`#D1D5DB`}}><IoSettings size={32}/>  Settings</a></li>
-        <li className="nav-item"><a className="nav-link" href="#"style={{color:`#D1D5DB`}}><MdOutlineHelp size={32}/>  Help</a></li>
+        <li className="nav-item">
+          <Link to="/Dashboard" className="nav-link" style={{ color: "#D1D5DB", cursor: "pointer" }}>
+            <MdDashboard size={30} /> Dashboard
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/Settings" className="nav-link" style={{ color: "#D1D5DB", cursor: "pointer" }}>
+            <IoSettings size={32} /> Settings
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/Help" className="nav-link" style={{ color: "#D1D5DB", cursor: "pointer" }}>
+            <MdOutlineHelp size={32} /> Help
+          </Link>
+        </li>
       </ul>
     </div>
   ]
