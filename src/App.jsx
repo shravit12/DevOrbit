@@ -1,13 +1,18 @@
-import {useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
 import './App.css';
+
 import Navbar from './Components/Navbar.jsx';
-import Sidebar from './Components/Sidebar.jsx';
+import Sidebar from './components/Sidebar.jsx';
 import Home from './Components/Home.jsx';
 import About from './Components/About.jsx';
 import Projects from './Components/Projects.jsx';
 import Contact from './Components/Contact.jsx';
-import bgimage from './rm373batch9-035.jpg';
+import Dashboard from "./pages/Dashboard.jsx";
+import Settings from "./pages/Setting.jsx";
+import Help from "./pages/Help.jsx";
 
+import bgimage from './rm373batch9-035.jpg';
 
 
 
@@ -36,12 +41,17 @@ backgroundImage:`url(${bgimage})` , minHeight: "100vh",
       <Navbar setActiveSection={handleSectionChange} />
       <div className="d-flex flex-grow-1">
         <Sidebar />
-        <main className="flex-grow-1 p-4" id='Mainbar'>
-          {activeSection === 'home' && <Home  setActiveSection={handleSectionChange}  />}
-        {activeSection === 'about' && <About />}
-        {activeSection === 'projects' && <Projects />}
-        {activeSection === 'contact' && <Contact />}
-        </main>
+         <div style={{ marginLeft: "200px", padding: "20px", width: "100%" }}>
+          <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/projects" element={<Projects />} />
+  <Route path="/contact" element={<Contact />} />
+  <Route path="/dashboard" element={<Dashboard />} />
+  <Route path="/settings" element={<Settings />} />
+  <Route path="/help" element={<Help />} />
+</Routes>
+          </div>
       </div>
      
     </div>
