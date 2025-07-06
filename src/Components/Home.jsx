@@ -1,20 +1,29 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // ← Import navigate
 import '../Home.css';
-const Home =({ setActiveSection })=>{
-const [animate, setAnimate] = useState(false);
+
+const Home = () => {
+  const [animate, setAnimate] = useState(false);
+  const navigate = useNavigate(); // ← Create navigate function
 
   useEffect(() => {
-    setAnimate(true); // Trigger animation once when component mounts
+    setAnimate(true);
   }, []);
 
-return[
+  return (
     <div className="home container">
       {/* Hero Section */}
       <section className="text-center my-5">
-         <h1 className={`display-4 fw-bold text-light animated-text ${animate ? 'animate-on-load' : ''}`}>
-Hi, I'm Shravit 👋</h1>
+        <h1 className={`display-4 fw-bold text-light animated-text ${animate ? 'animate-on-load' : ''}`}>
+          Hi, I'm Shravit 👋
+        </h1>
         <p className="lead text-secondary text-white">A passionate Full Stack Developer & Designer</p>
-        <button  className="btn btn-outline-light mt-3" onClick={() => setActiveSection('projects')}>Explore My Work</button>
+        <button
+          className="btn btn-outline-light mt-3"
+          onClick={() => navigate('/projects')} // ← Route to projects
+        >
+          Explore My Work
+        </button>
       </section>
 
       {/* Features / Highlights */}
@@ -42,9 +51,15 @@ Hi, I'm Shravit 👋</h1>
       {/* Call to Action */}
       <section className="text-center my-5">
         <h2 className="text-light">Want to collaborate or need a project?</h2>
-        <button className="btn btn-primary mt-3" onClick={() => setActiveSection('contact')}>Contact Me</button>
+        <button
+          className="btn btn-primary mt-3"
+          onClick={() => navigate('/contact')} // ← Route to contact
+        >
+          Contact Me
+        </button>
       </section>
     </div>
-]
-}
+  );
+};
+
 export default Home;
