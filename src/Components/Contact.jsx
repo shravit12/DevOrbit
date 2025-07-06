@@ -1,5 +1,5 @@
 import '../Contact.css';
-
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 const Contact = () => {
   return (
     <div className="contact container py-5">
