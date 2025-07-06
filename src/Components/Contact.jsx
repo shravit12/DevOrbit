@@ -32,7 +32,8 @@ return[
             </div>
             <div className="mb-3">
               <label htmlFor="message" className="form-label">Message</label>
-              <textarea className="form-control" id="message" rows="4" placeholder="Write your message..."></textarea>
+             <textarea className="form-control" id="message" name="message" rows="4" placeholder="Write your message..."></textarea>
+
             </div>
             <button type="submit" className="btn btn-primary">Send Message</button>
           </form>
