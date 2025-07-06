@@ -21,31 +21,32 @@ const Contact = () => {
 
         {/* Contact Form */}
         <div className="col-md-6">
-          <form
-            className="bg-dark text-white p-4 rounded shadow"
-            action="https://formsubmit.co/ee4212e6b3f8fccc5ff82ec50063359b"
-            method="POST"
-          >
+        <form
+  className="bg-dark text-white p-4 rounded shadow"
+  action="https://formsubmit.co/ee4212e6b3f8fccc5ff82ec50063359b"
+  method="POST"
+>
+  {/* ✅ Only keep this _next line */}
+  <input type="hidden" name="_next" value="https://dev-orbit-duxv.vercel.app/" />
 
-            {/* Hidden fields */}
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" value="https://dev-orbit-duxv.vercel.app/thank-you" />
+  {/* Other hidden fields */}
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_template" value="table" />
 
-            <div className="mb-3">
-              <label htmlFor="name" className="form-label">Your Name</label>
-              <input type="text" className="form-control" id="name" name="name" placeholder="Enter name" required />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="email" className="form-label">Email address</label>
-              <input type="email" name="email" className="form-control" id="email" placeholder="name@example.com" required />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="message" className="form-label">Message</label>
-              <textarea className="form-control" id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
-            </div>
-            <button type="submit" className="btn btn-primary">Send Message</button>
-          </form>
+  <div className="mb-3">
+    <label htmlFor="name" className="form-label">Your Name</label>
+    <input type="text" className="form-control" id="name" name="name" placeholder="Enter name" required />
+  </div>
+  <div className="mb-3">
+    <label htmlFor="email" className="form-label">Email address</label>
+    <input type="email" name="email" className="form-control" id="email" placeholder="name@example.com" required />
+  </div>
+  <div className="mb-3">
+    <label htmlFor="message" className="form-label">Message</label>
+    <textarea className="form-control" id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+  </div>
+  <button type="submit" className="btn btn-primary">Send Message</button>
+</form>
         </div>
       </div>
     </div>
