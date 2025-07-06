@@ -8,14 +8,14 @@ const Contact = () => {
         {/* Contact Info */}
         <div className="col-md-6 mb-4 text-white">
           <h5>Let's connect 👋</h5>
-          <p>Email: <a href="mailto:your@email.com" className="text-info">your@email.com</a></p>
-          <p>Location: Your City, Your Country</p>
+          <p>Email: <a href="mailto:sharmashravit@gmail.com" className="text-info">sharmashravit@email.com</a></p>
+          <p>Location: Hamirpur , Himachal Pradesh, India</p>
           <p>
             Follow me:
             <br />
-            <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="text-light me-3">GitHub</a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="text-light me-3">LinkedIn</a>
-            <a href="https://twitter.com/yourusername" target="_blank" rel="noreferrer" className="text-light">Twitter</a>
+            <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="text-light me-3"><FaGithub className="me-1" /> GitHub</a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="text-light me-3"> <FaLinkedin className="me-1" />LinkedIn</a>
+            <a href="https://twitter.com/yourusername" target="_blank" rel="noreferrer" className="text-light"> <FaTwitter className="me-1" />Twitter</a>
           </p>
         </div>
 
