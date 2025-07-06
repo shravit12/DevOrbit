@@ -23,7 +23,7 @@ const Contact = () => {
         <div className="col-md-6">
           <form
             className="bg-dark text-white p-4 rounded shadow"
-            action="https://formsubmit.co/el/vusudu"
+            action="https://formsubmit.co/shravitsharma@gmail.com"
             method="POST"
           >
             {/* Hidden fields */}
