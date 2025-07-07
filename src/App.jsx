@@ -32,7 +32,7 @@ function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  return [
+  return (
         <AuthProvider>
       <div
         className="contain d-flex flex-column min-vh-100"
@@ -78,7 +78,7 @@ function App() {
       </div>
         </AuthProvider>
    
-      ]
+      );
 }
 
 export default App;
