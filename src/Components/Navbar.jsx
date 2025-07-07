@@ -16,7 +16,7 @@ const Navbar = () => {
     try {
       await signOut(auth);
       alert("Logged out successfully!");
-      navigate("/Login");
+      navigate("/login");
     } catch (error) {
       alert("Error logging out: " + error.message);
     }
