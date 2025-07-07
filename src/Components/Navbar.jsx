@@ -27,7 +27,7 @@ const Navbar = () => {
     e.preventDefault();
   };
 
-  return [
+  return (
     <nav className="navbar navbar-expand-md text-white fixed-md-top sticky-top" id="Topbar" onWheel={blockScroll}>
       <div className="container">
         <Logo />
@@ -95,7 +95,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  ]
+  );
 };
 
 export default Navbar;
