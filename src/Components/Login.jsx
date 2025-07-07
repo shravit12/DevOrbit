@@ -19,7 +19,7 @@ const Login = () => {
     }
   };
 
-  return [
+  return (
     <div className="container text-white">
       <h2 className="mb-4">Login</h2>
       <form onSubmit={handleLogin}>
@@ -44,7 +44,7 @@ const Login = () => {
 </p>
 
     </div>
-  ]
+  );
 };
 
 export default Login;
