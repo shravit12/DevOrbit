@@ -14,6 +14,8 @@ import Help from "./pages/Help.jsx";
 import Login from './Components/Login.jsx';
 import Signup from './Components/Signup.jsx';
 import bgimage from './rm373batch9-035.jpg';
+import ProtectedRoute from './ProtectedRoute';
+import { AuthProvider } from './context/Authcontext';
 
 function App() {
 
@@ -31,7 +33,7 @@ function App() {
   }, []);
 
   return [
-  
+        <AuthProvider>
       <div
         className="contain d-flex flex-column min-vh-100"
         style={{
@@ -57,8 +59,16 @@ function App() {
   <Route path="/about" element={<About />} />
   <Route path="/projects" element={<Projects />} />
   <Route path="/contact" element={<Contact />} />
-  <Route path="/dashboard" element={<Dashboard />} />
-  <Route path="/settings" element={<Settings />} />
+  <Route path="/dashboard" element={
+                  <ProtectedRoute>
+                    <Dashboard />
+                  </ProtectedRoute>
+                } />
+                <Route path="/settings" element={
+                  <ProtectedRoute>
+                    <Settings />
+                  </ProtectedRoute>
+                } />
   <Route path="/help" element={<Help />} />
   <Route path="/login" element={<Login />} />
 <Route path="/signup" element={<Signup />} />
@@ -66,6 +76,7 @@ function App() {
           </div>
         </div>
       </div>
+        </AuthProvider>
    
       ]
 }
