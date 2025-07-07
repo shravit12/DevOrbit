@@ -33,7 +33,7 @@ function App() {
   }, []);
 
   return (
-        <AuthProvider>
+       
       <div
         className="contain d-flex flex-column min-vh-100"
         style={{
@@ -76,7 +76,7 @@ function App() {
           </div>
         </div>
       </div>
-        </AuthProvider>
+       
    
       );
 }
