@@ -61,7 +61,7 @@ const Navbar = () => {
               <>
                 <li className="nav-item ms-3">
                   <Link
-                    to="/login"
+                    to="/Login"
                     className="btn btn-outline-light btn-sm"
                     onClick={() => setIsOpen(false)}
                   >
@@ -70,7 +70,7 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item ms-2">
                   <Link
-                    to="/signup"
+                    to="/Signup"
                     className="btn btn-primary btn-sm"
                     onClick={() => setIsOpen(false)}
                   >
