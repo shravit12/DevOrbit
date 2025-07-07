@@ -27,6 +27,8 @@ const Navbar = () => {
     e.preventDefault();
   };
 
+    console.log("👤 Current User:", currentUser); 
+
   return (
     <nav className="navbar navbar-expand-md text-white fixed-md-top sticky-top" id="Topbar" onWheel={blockScroll}>
       <div className="container">
