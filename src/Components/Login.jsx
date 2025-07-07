@@ -1,49 +1,48 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Login = () => {
-  const [form, setForm] = useState({ email: '', password: '' });
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    alert('Login successful');
-    // Send login request to backend here
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      alert('Login successful!');
+      navigate('/dashboard');
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
   return [
-    <div className="container mt-5" style={{ maxWidth: '500px', color: 'white' }}>
+    <div className="container text-white">
       <h2 className="mb-4">Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label className="form-label">Email address</label>
-          <input
-            type="email"
-            className="form-control bg-dark text-white"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="mb-3">
-          <label className="form-label">Password</label>
-          <input
-            type="password"
-            className="form-control bg-dark text-white"
-            name="password"
-            value={form.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <button type="submit" className="btn btn-primary w-100">Login</button>
+      <form onSubmit={handleLogin}>
+        <input
+          type="email"
+          placeholder="Email"
+          className="form-control mb-3"
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          className="form-control mb-3"
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button type="submit" className="btn btn-primary">Login</button>
       </form>
+      <p className="mt-3 text-white">
+  Don't have an account? <Link to="/signup">Sign up</Link>
+</p>
+
     </div>
   ]
 };
