@@ -8,7 +8,7 @@ const Dashboard = () => {
    const isMobile = useIsMobile();
   const { currentUser } = useAuth();
   return [
-     <div className="container py-4">
+     <div className="container py-4 text-dark rounded">
       {/* Main Dashboard Section */}
       <section className="mb-5">
         <h2>👋 Welcome {currentUser?.displayName || "User"}</h2>
