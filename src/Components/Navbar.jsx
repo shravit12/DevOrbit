@@ -109,7 +109,7 @@ const Navbar = () => {
         </div>
          {/* Toggle Button (Mobile) */}
         <button
-          className="navbar-toggler ms-1.5 gap-1"
+          className="navbar-toggler ms-2 gap-1"
           type="button"
           style={{ color: 'white' }}
           onClick={() => setIsOpen(!isOpen)}
@@ -120,5 +120,4 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;
