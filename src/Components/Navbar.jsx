@@ -58,16 +58,45 @@ const Navbar = () => {
     {/* Right: Auth Buttons + Toggle */}
     <div className="d-flex align-items-center">
       {/* Auth Buttons */}
-      {!currentUser ? (
-        <>
-          <Link to="/login" className="btn btn-outline-light btn-sm me-2" onClick={() => setIsOpen(false)}>Login</Link>
-          <Link to="/signup" className="btn btn-primary btn-sm me-3" onClick={() => setIsOpen(false)}>Sign Up</Link>
-        </>
-      ) : (
-        <button className="btn btn-danger btn-sm me-3" onClick={() => { handleLogout(); setIsOpen(false); }}>
-          Logout
-        </button>
-      )}
+     {currentUser ? (
+  <Link to="/dashboard" onClick={() => setIsOpen(false)}>
+    {currentUser.photoURL ? (
+      <img
+        src={currentUser.photoURL}
+        alt="Profile"
+        className="rounded-circle"
+        width="36"
+        height="36"
+        style={{ cursor: "pointer", objectFit: "cover" }}
+      />
+    ) : (
+      <div
+        className="bg-secondary rounded-circle d-flex justify-content-center align-items-center text-white"
+        style={{ width: "36px", height: "36px", cursor: "pointer" }}
+      >
+        {currentUser.email[0].toUpperCase()}
+      </div>
+    )}
+  </Link>
+) : (
+  <>
+    <Link
+      to="/login"
+      className="btn btn-outline-light btn-sm me-2"
+      onClick={() => setIsOpen(false)}
+    >
+      Login
+    </Link>
+    <Link
+      to="/signup"
+      className="btn btn-primary btn-sm"
+      onClick={() => setIsOpen(false)}
+    >
+      Sign Up
+    </Link>
+  </>
+)}
+
 
       {/* Toggle Button - RIGHT aligned */}
       <button
