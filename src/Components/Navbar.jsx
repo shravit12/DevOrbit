@@ -72,7 +72,7 @@ const Navbar = () => {
 
         {/* Collapse Menu */}
         <div className={`collapse navbar-collapse justify-content-end ${isOpen ? 'show' : ''}`}>
-          <ul className="navbar-nav align-items-center">
+          <ul className="navbar-nav align-items-center text-white">
             <li className="nav-item link-but">
               <Link to="/" className="nav-link glow-link" onClick={() => setIsOpen(false)}>Home</Link>
             </li>
