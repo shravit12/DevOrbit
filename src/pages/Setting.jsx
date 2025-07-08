@@ -148,13 +148,7 @@ const handleLogout = async () => {
       <form onSubmit={handleSave}>
         <div className="mb-4" style={{ color: 'white' }}>
           <h5>Profile</h5>
-          <div className="mb-3">
-            <label className="form-label">Profile Image</label>
-            <input type="file" className="form-control" onChange={handleImageChange} />
-            {profileImage && (
-              <img src={profileImage} alt="preview" className="mt-2" width="100" />
-            )}
-          </div>
+         
 
           <div className="mb-3">
             <label className="form-label">Username</label>
@@ -229,18 +223,7 @@ const handleLogout = async () => {
          
 
 
-          <div className="mb-3">
-            <label className="form-label">Theme</label>
-            <select
-              className="form-select"
-              name="theme"
-              value={profile.theme}
-              onChange={handleProfileChange}
-            >
-              <option value="light">Light</option>
-              <option value="dark">Dark</option>
-            </select>
-          </div>
+        
         </div>
         
 
