@@ -1,7 +1,6 @@
 import useIsMobile from "../hooks/useIsMobile";
 import { useAuth } from "../context/Authcontext";
-import Settings from "./Settings";
-import Help from "./Help";
+
 import { Link } from "react-router-dom";
 
 const Dashboard = () => {
@@ -21,7 +20,7 @@ const Dashboard = () => {
   <ul className="list-group list-group-flush">
     <li className="list-group-item bg-dark">
      
-        <Link to="/setting" className="btn btn-outline-info btn-lg w-100 text-start" >
+        <Link to="/Settings" className="btn btn-outline-info btn-lg w-100 text-start" >
             ⚙️ Setting
           </Link>
     </li>
