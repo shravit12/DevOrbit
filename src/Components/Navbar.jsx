@@ -27,76 +27,74 @@ const Navbar = () => {
     e.preventDefault();
   };
 
-    console.log("👤 Current User:", currentUser); 
 
   return (
-    <nav className="navbar navbar-expand-md text-white fixed-md-top sticky-top" id="Topbar" onWheel={blockScroll}>
-      <div className="container">
-        <Logo />
+   <nav className="navbar navbar-expand-md text-white fixed-md-top sticky-top" id="Topbar" onWheel={blockScroll}>
+  <div className="container">
+    <Logo />
 
+    {/* Mobile Toggle Button */}
+    <button
+      className="navbar-toggler"
+      type="button"
+      style={{ color: `white` }}
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      {isOpen ? <FaTimes /> : <FaBars />}
+    </button>
+
+    {/* Collapsible Nav Links */}
+    <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}>
+      <ul className="navbar-nav ms-auto align-items-center">
+        <li className="nav-item link-but">
+          <Link to="/" className="nav-link glow-link" style={{ color: 'white' }} onClick={() => setIsOpen(false)}>Home</Link>
+        </li>
+        <li className="nav-item link-but">
+          <Link to="/about" className="nav-link glow-link" style={{ color: 'white' }} onClick={() => setIsOpen(false)}>About</Link>
+        </li>
+        <li className="nav-item link-but">
+          <Link to="/projects" className="nav-link glow-link" style={{ color: 'white' }} onClick={() => setIsOpen(false)}>Projects</Link>
+        </li>
+        <li className="nav-item link-but">
+          <Link to="/contact" className="nav-link glow-link" style={{ color: 'white' }} onClick={() => setIsOpen(false)}>Contact</Link>
+        </li>
+      </ul>
+    </div>
+
+    {/* Auth Buttons - OUTSIDE TOGGLE - always visible */}
+    <div className="d-flex ms-3 align-items-center">
+      {!currentUser ? (
+        <>
+          <Link
+            to="/login"
+            className="btn btn-outline-light btn-sm me-2"
+            onClick={() => setIsOpen(false)}
+          >
+            Login
+          </Link>
+          <Link
+            to="/signup"
+            className="btn btn-primary btn-sm"
+            onClick={() => setIsOpen(false)}
+          >
+            Sign Up
+          </Link>
+        </>
+      ) : (
         <button
-          className="navbar-toggler"
-          type="button"
-          style={{ color: `white` }}
-          onClick={() => setIsOpen(!isOpen)}
+          className="btn btn-danger btn-sm"
+          onClick={() => {
+            handleLogout();
+            setIsOpen(false);
+          }}
         >
-          {isOpen ? <FaTimes /> : <FaBars />}
+          Logout
         </button>
+      )}
+    </div>
+  </div>
+</nav>
 
-        <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}>
-          <ul className="navbar-nav ms-auto align-items-center">
-            <li className="nav-item link-but">
-              <Link to="/" className="nav-link glow-link" style={{ color: 'white' }} onClick={() => setIsOpen(false)}>Home</Link>
-            </li>
-            <li className="nav-item link-but">
-              <Link to="/about" className="nav-link glow-link" style={{ color: 'white' }} onClick={() => setIsOpen(false)}>About</Link>
-            </li>
-            <li className="nav-item link-but">
-              <Link to="/projects" className="nav-link glow-link" style={{ color: 'white' }} onClick={() => setIsOpen(false)}>Projects</Link>
-            </li>
-            <li className="nav-item link-but">
-              <Link to="/contact" className="nav-link glow-link" style={{ color: 'white' }} onClick={() => setIsOpen(false)}>Contact</Link>
-            </li>
-
-            {/* Conditional Auth Buttons */}
-            {!currentUser ? (
-              <>
-                <li className="nav-item ms-3">
-                  <Link
-                    to="/login"
-                    className="btn btn-outline-light btn-sm"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Login
-                  </Link>
-                </li>
-                <li className="nav-item ms-2">
-                  <Link
-                    to="/signup"
-                    className="btn btn-primary btn-sm"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Sign Up
-                  </Link>
-                </li>
-              </>
-            ) : (
-              <li className="nav-item ms-3">
-                <button
-                  className="btn btn-danger btn-sm"
-                  onClick={() => {
-                    handleLogout();
-                    setIsOpen(false);
-                  }}
-                >
-                  Logout
-                </button>
-              </li>
-            )}
-          </ul>
-        </div>
-      </div>
-    </nav>
   );
 };
 
