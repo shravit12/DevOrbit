@@ -1,6 +1,6 @@
 import useIsMobile from "../hooks/useIsMobile";
 import { useAuth } from "../context/Authcontext";
-import Settings from "./Setting";
+import Settings from "./Settings";
 import Help from "./Help";
 import { Link } from "react-router-dom";
 
