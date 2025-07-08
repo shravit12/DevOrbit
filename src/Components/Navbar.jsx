@@ -56,7 +56,7 @@ const Navbar = () => {
     </div>
 
     {/* Right: Auth Buttons + Toggle */}
-    <div className="d-flex align-items-center gap-1">
+    <div className="d-flex align-items-center gap-2">
       {/* Auth Buttons */}
      {currentUser ? (
   <Link to="/dashboard" onClick={() => setIsOpen(false)}>
@@ -71,7 +71,7 @@ const Navbar = () => {
       />
     ) : (
       <div
-        className="bg-secondary rounded-circle d-flex justify-content-center align-items-center text-white gap-1"
+        className="bg-secondary rounded-circle d-flex justify-content-center align-items-center text-white gap-2"
         style={{ width: "36px", height: "36px", cursor: "pointer" }}
       >
         {currentUser.email[0].toUpperCase()}
