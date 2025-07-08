@@ -1,39 +1,32 @@
+import useIsMobile from "../hooks/useIsMobile";
+import { useAuth } from "../context/Authcontext";
+import Settings from "./Settings";
+import Help from "./Help";
+
+
 const Dashboard = () => {
+   const isMobile = useIsMobile();
+  const { currentUser } = useAuth();
   return [
-     <div>
-      <h2 className="mb-4">Dashboard</h2>
+     <div className="container py-4">
+      {/* Main Dashboard Section */}
+      <section className="mb-5">
+        <h2>👋 Welcome {currentUser?.displayName || "User"}</h2>
+        <p>This is your main dashboard content.</p>
+      </section>
 
-      <div className="row">
-        <div className="col-md-4">
-          <div className="card p-3 shadow-sm mb-4">
-            <h5>Total Users</h5>
-            <p>1,200</p>
-          </div>
-        </div>
+      {/* Only show these in mobile view */}
+      {isMobile && (
+        <>
+          <section className="mb-5">
+            <Settings />
+          </section>
 
-        <div className="col-md-4">
-          <div className="card p-3 shadow-sm mb-4">
-            <h5>Projects</h5>
-            <p>35 Active</p>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="card p-3 shadow-sm mb-4">
-            <h5>Messages</h5>
-            <p>12 New</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="card p-4 mt-4">
-        <h4>Recent Activity</h4>
-        <ul>
-          <li>User John created a project</li>
-          <li>Settings updated</li>
-          <li>Help ticket resolved</li>
-        </ul>
-      </div>
+          <section>
+            <Help />
+          </section>
+        </>
+      )}
     </div>
   ]
 };
