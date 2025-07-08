@@ -10,9 +10,22 @@ import {
 } from 'firebase/auth';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
+import { signOut } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 const Settings = () => {
   const { currentUser } = useAuth();
+  const navigate = useNavigate();
+
+const handleLogout = async () => {
+  try {
+    await signOut(auth);
+    alert("Logged out successfully!");
+    navigate("/login");
+  } catch (error) {
+    alert("Error logging out: " + error.message);
+  }
+};
 
   const [profile, setProfile] = useState({
     username: '',
@@ -212,6 +225,13 @@ const Settings = () => {
             />
             <label className="form-check-label">Enable Notifications</label>
           </div>
+
+          <div className="mt-4">
+  <button className="btn btn-danger w-100" onClick={handleLogout}>
+    Logout
+  </button>
+</div>
+
 
           <div className="mb-3">
             <label className="form-label">Theme</label>
