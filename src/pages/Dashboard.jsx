@@ -2,7 +2,7 @@ import useIsMobile from "../hooks/useIsMobile";
 import { useAuth } from "../context/Authcontext";
 import Settings from "./Setting";
 import Help from "./Help";
-
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
    const isMobile = useIsMobile();
