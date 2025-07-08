@@ -48,7 +48,7 @@ const Navbar = () => {
 
       return (
         <div
-          className="rounded-circle bg-light text-dark d-flex align-items-right justify-content-center"
+          className="rounded-circle bg-light text-dark d-flex align-items-center justify-content-right justify-content-center"
           style={{
             width: "35px",
             height: "35px",
@@ -89,7 +89,7 @@ const Navbar = () => {
         </div>
 
         {/* Auth Buttons OUTSIDE Toggle */}
-        <div className="d-flex ms-3 align-items-right gap-2">
+        <div className="d-flex ms-3 align-items-right justify-content-right gap-2">
           {!currentUser ? (
             <>
               <Link to="/login" className="btn btn-outline-light btn-sm">Login</Link>
@@ -100,7 +100,7 @@ const Navbar = () => {
               <Link to="/dashboard">
                 {renderProfileIcon()}
               </Link>
-              <button className="btn btn-danger btn-sm align-item-right" onClick={handleLogout}>
+              <button className="btn btn-danger btn-sm align-item-right justify-content-right" onClick={handleLogout}>
                 Logout
               </button>
             </>
