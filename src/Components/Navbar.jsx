@@ -68,15 +68,7 @@ const Navbar = () => {
       <div className="container">
         <Logo />
 
-        {/* Toggle Button (Mobile) */}
-        <button
-          className="navbar-toggler ms-auto"
-          type="button"
-          style={{ color: 'white' }}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </button>
+       
 
         {/* Collapse Menu */}
         <div className={`collapse navbar-collapse justify-content-end ${isOpen ? 'show' : ''}`}>
@@ -112,8 +104,18 @@ const Navbar = () => {
                 Logout
               </button>
             </>
+      
           )}
         </div>
+         {/* Toggle Button (Mobile) */}
+        <button
+          className="navbar-toggler ms-auto"
+          type="button"
+          style={{ color: 'white' }}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </div>
     </nav>
   );
