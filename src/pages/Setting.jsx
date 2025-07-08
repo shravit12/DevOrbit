@@ -83,6 +83,7 @@ const Settings = () => {
 
   const handleSave = async (e) => {
     e.preventDefault();
+    alert("✅ Settings saved successfully!");
 
     try {
       // Update display name
