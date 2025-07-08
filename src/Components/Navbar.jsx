@@ -29,69 +29,57 @@ const Navbar = () => {
 
 
   return (
-   <nav className="navbar navbar-expand-md text-white fixed-md-top sticky-top" id="Topbar" onWheel={blockScroll}>
-  <div className="container">
-    <Logo />
+ <nav className="navbar navbar-expand-md text-white sticky-top" id="Topbar" onWheel={blockScroll}>
+  <div className="container d-flex justify-content-between align-items-center">
 
-    {/* Mobile Toggle Button */}
-    <button
-      className="navbar-toggler"
-      type="button"
-      style={{ color: `white` }}
-      onClick={() => setIsOpen(!isOpen)}
-    >
-      {isOpen ? <FaTimes /> : <FaBars />}
-    </button>
+    {/* Left: Logo */}
+    <div className="d-flex align-items-center">
+      <Logo />
+    </div>
 
-    {/* Collapsible Nav Links */}
-    <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}>
-      <ul className="navbar-nav ms-auto align-items-center">
+    {/* Center: Nav Links (collapsible) */}
+    <div className={`collapse navbar-collapse justify-content-center ${isOpen ? 'show' : ''}`}>
+      <ul className="navbar-nav text-center">
         <li className="nav-item link-but">
-          <Link to="/" className="nav-link glow-link" style={{ color: 'white' }} onClick={() => setIsOpen(false)}>Home</Link>
+          <Link to="/" className="nav-link glow-link text-white" onClick={() => setIsOpen(false)}>Home</Link>
         </li>
         <li className="nav-item link-but">
-          <Link to="/about" className="nav-link glow-link" style={{ color: 'white' }} onClick={() => setIsOpen(false)}>About</Link>
+          <Link to="/about" className="nav-link glow-link text-white" onClick={() => setIsOpen(false)}>About</Link>
         </li>
         <li className="nav-item link-but">
-          <Link to="/projects" className="nav-link glow-link" style={{ color: 'white' }} onClick={() => setIsOpen(false)}>Projects</Link>
+          <Link to="/projects" className="nav-link glow-link text-white" onClick={() => setIsOpen(false)}>Projects</Link>
         </li>
         <li className="nav-item link-but">
-          <Link to="/contact" className="nav-link glow-link" style={{ color: 'white' }} onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link to="/contact" className="nav-link glow-link text-white" onClick={() => setIsOpen(false)}>Contact</Link>
         </li>
       </ul>
     </div>
 
-    {/* Auth Buttons - OUTSIDE TOGGLE - always visible */}
-    <div className="d-flex ms-3 align-items-center">
+    {/* Right: Auth Buttons + Toggle */}
+    <div className="d-flex align-items-center">
+      {/* Auth Buttons */}
       {!currentUser ? (
         <>
-          <Link
-            to="/login"
-            className="btn btn-outline-light btn-sm me-2"
-            onClick={() => setIsOpen(false)}
-          >
-            Login
-          </Link>
-          <Link
-            to="/signup"
-            className="btn btn-primary btn-sm"
-            onClick={() => setIsOpen(false)}
-          >
-            Sign Up
-          </Link>
+          <Link to="/login" className="btn btn-outline-light btn-sm me-2" onClick={() => setIsOpen(false)}>Login</Link>
+          <Link to="/signup" className="btn btn-primary btn-sm me-3" onClick={() => setIsOpen(false)}>Sign Up</Link>
         </>
       ) : (
-        <button
-          className="btn btn-danger btn-sm"
-          onClick={() => {
-            handleLogout();
-            setIsOpen(false);
-          }}
-        >
+        <button className="btn btn-danger btn-sm me-3" onClick={() => { handleLogout(); setIsOpen(false); }}>
           Logout
         </button>
       )}
+
+      {/* Toggle Button - RIGHT aligned */}
+      <button
+        className="navbar-toggler"
+        type="button"
+        style={{ color: `white` }}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? <FaTimes /> : <FaBars />}
+      </button>
     </div>
+
   </div>
 </nav>
 
