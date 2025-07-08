@@ -109,7 +109,7 @@ const Navbar = () => {
         </div>
          {/* Toggle Button (Mobile) */}
         <button
-          className="navbar-toggler ms-auto"
+          className="navbar-toggler ms-0"
           type="button"
           style={{ color: 'white' }}
           onClick={() => setIsOpen(!isOpen)}
