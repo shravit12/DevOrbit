@@ -89,7 +89,7 @@ const Navbar = () => {
         </div>
 
         {/* Auth Buttons OUTSIDE Toggle */}
-        <div className="d-flex ms-3 align-items-right justify-content-right gap-2">
+        <div className="d-flex ms-3 align-items-right justify-content-right ">
           {!currentUser ? (
             <>
               <Link to="/login" className="btn btn-outline-light btn-sm">Login</Link>
