@@ -226,11 +226,7 @@ const handleLogout = async () => {
             <label className="form-check-label">Enable Notifications</label>
           </div>
 
-          <div className="mt-4">
-  <button className="btn btn-danger w-100" onClick={handleLogout}>
-    Logout
-  </button>
-</div>
+         
 
 
           <div className="mb-3">
@@ -246,10 +242,15 @@ const handleLogout = async () => {
             </select>
           </div>
         </div>
+        
 
         <button type="submit" className="btn btn-success">Save Settings</button>
       </form>
-
+ <div className="mt-4">
+  <button className="btn btn-danger w-100" onClick={handleLogout}>
+    Logout
+  </button>
+</div>
       <div className="mt-5" style={{
         backgroundColor: "rgba(255, 255, 255, 0.1)",
         backdropFilter: "blur(10px)",
