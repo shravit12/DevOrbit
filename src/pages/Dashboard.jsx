@@ -15,18 +15,19 @@ const Dashboard = () => {
         <p>This is your main dashboard content.</p>
       </section>
 
-      {/* Only show these in mobile view */}
-      {isMobile && (
-        <>
-          <section className="mb-5">
-            <Settings />
-          </section>
-
-          <section>
-            <Help />
-          </section>
-        </>
-      )}
+   
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li>
+            <a href="/settings" className="text-info">Go to Settings</a>
+          </li>
+          
+          <li>
+            <a href="/help" className="text-info">Help </a>
+          </li>
+        </ul>
+      </div>
     </div>
   ]
 };
