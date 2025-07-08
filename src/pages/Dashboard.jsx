@@ -20,14 +20,17 @@ const Dashboard = () => {
   <h4 className="mb-3">Quick Links</h4>
   <ul className="list-group list-group-flush">
     <li className="list-group-item bg-dark">
-      <a href="/settings" className="btn btn-outline-info btn-lg w-100 text-start">
-        ⚙️ Go to Settings
-      </a>
+     
+        <Link to="/setting" className="btn btn-outline-info btn-lg w-100 text-start" >
+            ⚙️ Setting
+          </Link>
     </li>
     <li className="list-group-item bg-dark">
-      <a href="/help" className="btn btn-outline-info btn-lg w-100 text-start">
-        ❓ Help Center
-      </a>
+      
+            <Link to="/help" className="btn btn-outline-info btn-lg w-100 text-start" >
+            ❓ Help Center
+          </Link>
+       
     </li>
   </ul>
 </div>
