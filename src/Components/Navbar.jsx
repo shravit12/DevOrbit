@@ -74,16 +74,16 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse justify-content-end ${isOpen ? 'show' : ''} text-white`}>
   <ul className="navbar-nav align-items-center">
             <li className="nav-item link-but">
-              <Link to="/" className="nav-link glow-link" onClick={() => setIsOpen(false)}>Home</Link>
+              <Link to="/" className="nav-link glow-link text-white" onClick={() => setIsOpen(false)}>Home</Link>
             </li>
             <li className="nav-item link-but">
-              <Link to="/about" className="nav-link glow-link" onClick={() => setIsOpen(false)}>About</Link>
+              <Link to="/about" className="nav-link glow-link text-white" onClick={() => setIsOpen(false)}>About</Link>
             </li>
             <li className="nav-item link-but">
-              <Link to="/projects" className="nav-link glow-link" onClick={() => setIsOpen(false)}>Projects</Link>
+              <Link to="/projects" className="nav-link glow-link text-white" onClick={() => setIsOpen(false)}>Projects</Link>
             </li>
             <li className="nav-item link-but">
-              <Link to="/contact" className="nav-link glow-link" onClick={() => setIsOpen(false)}>Contact</Link>
+              <Link to="/contact" className="nav-link glow-link text-white" onClick={() => setIsOpen(false)}>Contact</Link>
             </li>
           </ul>
         </div>
