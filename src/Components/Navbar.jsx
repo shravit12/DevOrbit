@@ -48,7 +48,7 @@ const Navbar = () => {
 
       return (
         <div
-          className="rounded-circle bg-light text-dark d-flex align-items-center justify-content-center"
+          className="rounded-circle bg-light text-dark d-flex align-items-right justify-content-center"
           style={{
             width: "35px",
             height: "35px",
@@ -100,7 +100,7 @@ const Navbar = () => {
               <Link to="/dashboard">
                 {renderProfileIcon()}
               </Link>
-              <button className="btn btn-danger btn-sm" onClick={handleLogout}>
+              <button className="btn btn-danger btn-sm align-item-right" onClick={handleLogout}>
                 Logout
               </button>
             </>
