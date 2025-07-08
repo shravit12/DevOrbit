@@ -1,6 +1,6 @@
 import useIsMobile from "../hooks/useIsMobile";
 import { useAuth } from "../context/Authcontext";
-import Settings from "./Settings";
+import Settings from "./Setting";
 import Help from "./Help";
 
 
