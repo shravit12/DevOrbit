@@ -9,21 +9,27 @@ import { Link } from "react-router-dom";
 const Dashboard = () => {
    const isMobile = useIsMobile();
   const { currentUser } = useAuth();
-   const [projects, setProjects] = useState([]);
+   const { currentUser } = useAuth();
+  const [stats, setStats] = useState({
+    projectCount: 0,
+    projectsCompleted: 0,
+    projectsInProgress: 0,
+  });
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      const ref = collection(db, "users", currentUser.uid, "projects");
-      const snap = await getDocs(ref);
-      const data = snap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      setProjects(data);
-    };
- if (currentUser) fetchProjects();
-  }, [currentUser]);
+    const fetchStats = async () => {
+      if (!currentUser) return;
 
-  const total = projects.length;
-  const completed = projects.filter(p => p.status === "Completed").length;
-  const inProgress = total - completed;
+      const docRef = doc(db, 'users', currentUser.uid);
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        setStats(docSnap.data());
+      }
+    };
+
+    fetchStats();
+  }, [currentUser]);
    
   return [
      <div className="container py-4 text-white">
@@ -31,27 +37,28 @@ const Dashboard = () => {
       <section className="mb-5">
         <h2>👋 Welcome {currentUser?.displayName || "User"}</h2>
         <p>This is your main dashboard content.</p>
-         
-      <div className="row mt-4">
-        <div className="col-md-4">
-          <div className="card bg-dark text-white p-3">
-            <h4>Total Projects</h4>
-            <p>{total}</p>
+      
+      <div className="row">
+        <div className="col-md-4 mb-4">
+          <div className="card bg-dark text-white p-4 shadow">
+            <h5>Total Projects</h5>
+            <p className="fs-4">{stats.projectCount}</p>
           </div>
         </div>
-        <div className="col-md-4">
-          <div className="card bg-success text-white p-3">
-            <h4>Completed</h4>
-            <p>{completed}</p>
+        <div className="col-md-4 mb-4">
+          <div className="card bg-dark text-white p-4 shadow">
+            <h5>Completed Projects</h5>
+            <p className="fs-4">{stats.projectsCompleted}</p>
           </div>
         </div>
-        <div className="col-md-4">
-          <div className="card bg-warning text-dark p-3">
-            <h4>In Progress</h4>
-            <p>{inProgress}</p>
+        <div className="col-md-4 mb-4">
+          <div className="card bg-dark text-white p-4 shadow">
+            <h5>In Progress</h5>
+            <p className="fs-4">{stats.projectsInProgress}</p>
           </div>
         </div>
       </div>
+    </div>
     
       </section>
 
