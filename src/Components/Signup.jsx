@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase';
+import { auth, db } from '../firebase';
 import { useNavigate } from 'react-router-dom';
+import { doc, setDoc } from 'firebase/firestore'; // 🔥 Firestore
 
 const Signup = () => {
   const [email, setEmail] = useState('');
@@ -11,7 +12,19 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      // Create user in Firebase Auth
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      // Create Firestore user doc with default values
+      await setDoc(doc(db, 'users', user.uid), {
+        email: user.email,
+        projectCount: 0,
+        projectsCompleted: 0,
+        projectsInProgress: 0,
+        createdAt: new Date(),
+      });
+
       alert('Signup successful!');
       navigate('/dashboard');
     } catch (error) {
