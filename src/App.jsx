@@ -13,11 +13,12 @@ import Settings from "./pages/Setting.jsx";
 import Help from "./pages/Help.jsx";
 import Login from './Components/Login.jsx';
 import Signup from './Components/Signup.jsx';
-import bgimage from './rm373batch9-035.jpg';
+
 import ProtectedRoute from './ProtectedRoute';
 import { AuthProvider } from './context/Authcontext';
 
 function App() {
+const bgimage = "https://images.unsplash.com/photo-1526925539332-aa3b66e35444?q=80&w=1920&auto=format&fit=crop";
 
    const [isSidebarVisible, setIsSidebarVisible] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -37,7 +38,7 @@ function App() {
       <div
         className="contain d-flex flex-column min-vh-100"
         style={{
-          backgroundImage: `url(${bgimage})`,
+         backgroundImage: `url(${bgimage})`,
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
