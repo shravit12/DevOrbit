@@ -28,7 +28,7 @@ Hi, I'm Shravit 👋</h1>
         <i className="bi bi-laptop fs-1"></i> {/* Bootstrap Icons */}
       </div>
       <h4 className="fw-bold">Frontend</h4>
-      <p className="text-dark-emphasis">React, Webflow, HTML, CSS, JavaScript</p>
+      <p className="text-white">React, Webflow, HTML, CSS, JavaScript</p>
     </div>
   </div>
   <div className="col-md-4">
@@ -37,7 +37,7 @@ Hi, I'm Shravit 👋</h1>
         <i className="bi bi-hdd-network fs-1"></i>
       </div>
       <h4 className="fw-bold">Backend</h4>
-      <p className="text-dark-emphasis">Node.js, Express, MongoDB</p>
+      <p className="text-white">Node.js, Express, MongoDB</p>
     </div>
   </div>
   <div className="col-md-4">
@@ -46,7 +46,7 @@ Hi, I'm Shravit 👋</h1>
         <i className="bi bi-palette fs-1"></i>
       </div>
       <h4 className="fw-bold">UI/UX Design</h4>
-      <p className="text-dark-emphasis">Figma, clean & modern design</p>
+      <p className="text-white">Figma, clean & modern design</p>
     </div>
   </div>
 </section>
