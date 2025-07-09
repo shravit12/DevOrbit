@@ -18,7 +18,7 @@ import ProtectedRoute from './ProtectedRoute';
 import { AuthProvider } from './context/Authcontext';
 
 function App() {
-const bgimage = "https://images.unsplash.com/photo-1503724679145-9bf87ca541ce?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0";
+const bgimage = "https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?q=80&w=448&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
    const [isSidebarVisible, setIsSidebarVisible] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
