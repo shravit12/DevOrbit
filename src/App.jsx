@@ -34,7 +34,7 @@ const bgimage = "https://images.unsplash.com/photo-1503724679145-9bf87ca541ce?q=
   }, []);
 
   return (
-      <div style={{ position: "relative", minHeight: "100vh" }}>
+      <div style={{ position: "fixed", minHeight: "100vh" }}>
         {/* Background Image Layer */}
         <div
           style={{
