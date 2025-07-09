@@ -21,26 +21,36 @@ Hi, I'm Shravit 👋</h1>
       </section>
 
       {/* Features / Highlights */}
-      <section className="row text-center g-4 my-5">
-        <div className="col-md-4">
-          <div className="p-4 border rounded bg-dark text-white h-100">
-            <h4>Frontend</h4>
-            <p>React, Webflow, HTML, CSS, JavaScript</p>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="p-4 border rounded bg-dark text-white h-100">
-            <h4>Backend</h4>
-            <p>Node.js, Express, MongoDB</p>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="p-4 border rounded bg-dark text-white h-100">
-            <h4>UI/UX Design</h4>
-            <p>Figma, Adobe XD, clean & modern design</p>
-          </div>
-        </div>
-      </section>
+     <section className="row text-center g-4 my-5">
+  <div className="col-md-4">
+    <div className="p-4 border rounded bg-gradient text-white h-100 shadow skill-card">
+      <div className="mb-3">
+        <i className="bi bi-laptop fs-1"></i> {/* Bootstrap Icons */}
+      </div>
+      <h4 className="fw-bold">Frontend</h4>
+      <p className="text-light-emphasis">React, Webflow, HTML, CSS, JavaScript</p>
+    </div>
+  </div>
+  <div className="col-md-4">
+    <div className="p-4 border rounded bg-gradient text-white h-100 shadow skill-card">
+      <div className="mb-3">
+        <i className="bi bi-hdd-network fs-1"></i>
+      </div>
+      <h4 className="fw-bold">Backend</h4>
+      <p className="text-light-emphasis">Node.js, Express, MongoDB</p>
+    </div>
+  </div>
+  <div className="col-md-4">
+    <div className="p-4 border rounded bg-gradient text-white h-100 shadow skill-card">
+      <div className="mb-3">
+        <i className="bi bi-palette fs-1"></i>
+      </div>
+      <h4 className="fw-bold">UI/UX Design</h4>
+      <p className="text-light-emphasis">Figma, Adobe XD, clean & modern design</p>
+    </div>
+  </div>
+</section>
+
 
       {/* Call to Action */}
       <section className="text-center my-5">
