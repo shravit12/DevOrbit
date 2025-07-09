@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import useIsMobile from "../hooks/useIsMobile";
 import { useAuth } from "../context/Authcontext";
 import { db } from "../firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore"; 
 
 import { Link } from "react-router-dom";
 
