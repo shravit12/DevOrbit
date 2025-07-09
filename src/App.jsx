@@ -34,33 +34,42 @@ const bgimage = "https://images.unsplash.com/photo-1503724679145-9bf87ca541ce?q=
   }, []);
 
   return (
-       
-      <div
-        className="contain d-flex flex-column min-vh-100"
-        style={{
-         backgroundImage: `url(${bgimage})`,
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-          backgroundPosition: "center",
-        }}
-      >
-        <Navbar />
-        <div className="d-flex flex-grow-1">
-          <Sidebar />
-          <div
-  style={{
-    marginLeft: isSidebarVisible && windowWidth >= 768 ? '200px' : '0',
-    padding: '20px',
-    width: '100%',
-    transition: 'margin-left 0.3s ease',
-  }}
->
-          <Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/about" element={<About />} />
-  <Route path="/projects" element={<Projects />} />
-  <Route path="/contact" element={<Contact />} />
-  <Route path="/dashboard" element={
+      <div style={{ position: "relative", minHeight: "100vh" }}>
+        {/* Background Image Layer */}
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundImage: `url(${bgimage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            zIndex: -1,
+          }}
+        />
+
+        {/* Foreground App */}
+        <div className="contain d-flex flex-column min-vh-100">
+          <Navbar />
+          <div className="d-flex flex-grow-1">
+            <Sidebar />
+            <div
+              style={{
+                marginLeft: isSidebarVisible && windowWidth >= 768 ? '200px' : '0',
+                padding: '20px',
+                width: '100%',
+                transition: 'margin-left 0.3s ease',
+              }}
+            >
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/contact" element={<Contact />} />
+
+                <Route path="/dashboard" element={
                   <ProtectedRoute>
                     <Dashboard />
                   </ProtectedRoute>
@@ -70,14 +79,14 @@ const bgimage = "https://images.unsplash.com/photo-1503724679145-9bf87ca541ce?q=
                     <Settings />
                   </ProtectedRoute>
                 } />
-  <Route path="/help" element={<Help />} />
-  <Route path="/login" element={<Login />} />
-<Route path="/signup" element={<Signup />} />
-</Routes>
+                <Route path="/help" element={<Help />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+              </Routes>
+            </div>
           </div>
         </div>
       </div>
-       
    
       );
 }
