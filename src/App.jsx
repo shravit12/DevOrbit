@@ -51,7 +51,7 @@ const bgimage = "https://images.unsplash.com/photo-1503724679145-9bf87ca541ce?q=
         />
 
         {/* Foreground App */}
-        <div className="contain d-flex flex-column min-vh-100">
+        <div className="contain d-flex flex-column min-vh-100"   style={{ minHeight: "100dvh" }}>
           <Navbar />
           <div className="d-flex flex-grow-1">
             <Sidebar />
