@@ -13,7 +13,7 @@ const navigate = useNavigate();
 return[
     <div className="home container">
       {/* Hero Section */}
-      <section className="text-center my-5">
+      <section className="text-center my-5 glow-grad">
          <h1 className={`display-4 glow-animate  fw-bold text-light animated-text ${animate ? 'animate-on-load' : ''}`}>
 Hi, I'm Shravit 👋</h1>
         <p className="lead text-secondary text-white">A passionate Full Stack Developer & Designer</p>
