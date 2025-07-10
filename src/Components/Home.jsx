@@ -13,12 +13,29 @@ const navigate = useNavigate();
 return[
     <div className="home container">
       {/* Hero Section */}
-      <section className="text-center my-5 glow-grad">
-         <h1 className={`display-4 glow-animate  fw-bold text-light animated-text ${animate ? 'animate-on-load' : ''}`}>
-Hi, I'm Shravit 👋</h1>
-        <p className="lead text-secondary text-white">A passionate Full Stack Developer & Designer</p>
-        <button  className="btn btn-outline-light mt-3" onClick={() => navigate('/projects')}>Explore My Work</button>
-      </section>
+     <section className="text-center my-5 position-relative overflow-hidden">
+  {/* Gradient Background Layer */}
+  <div className="glow-grad position-absolute top-0 start-0 w-100 h-100"></div>
+
+  {/* Text Content Layer */}
+  <div className="position-relative">
+    <h1
+      className={`display-4 glow-animate fw-bold text-light animated-text ${
+        animate ? 'animate-on-load' : ''
+      }`}
+    >
+      Hi, I'm Shravit 👋
+    </h1>
+    <p className="lead text-white">A passionate Full Stack Developer & Designer</p>
+    <button
+      className="btn btn-outline-light mt-3"
+      onClick={() => navigate('/projects')}
+    >
+      Explore My Work
+    </button>
+  </div>
+</section>
+
 
       {/* Features / Highlights */}
      <section className="row text-center g-4 my-5">
