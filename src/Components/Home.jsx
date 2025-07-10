@@ -15,7 +15,7 @@ return[
       {/* Hero Section */}
      <section className="text-center my-5 position-relative overflow-hidden">
   {/* Gradient Background Layer */}
-  <div className="glow-grad position-absolute top-0 start-0 w-100 h-100"></div>
+  <div className="glow-grad glow-box position-absolute top-0 start-0 w-100 h-100"></div>
 
   {/* Text Content Layer */}
   <div className="position-relative">
