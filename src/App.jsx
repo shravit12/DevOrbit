@@ -36,7 +36,7 @@ const bgimage = "https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?q=
   return (
       <div style={{ position: "relative", minHeight: "100vh" }}>
         {/* Background Image Layer */}
-        <div
+{/*         <div
           style={{
             position: "fixed",
             top: 0,
@@ -49,7 +49,7 @@ const bgimage = "https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?q=
             backgroundPosition: "center",
             zIndex: -1,
           }}
-        />
+        /> */}
 
         {/* Foreground App */}
         <div className="contain d-flex flex-column min-vh-100"   style={{ minHeight: "100dvh" }}>
