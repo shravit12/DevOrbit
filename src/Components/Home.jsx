@@ -38,7 +38,7 @@ return[
 
 
       {/* Features / Highlights */}
-     <section className="row text-center g-4 my-5">
+     <section className="row text-center g-4 my-5 bg-s">
   <div className="col-md-4  skills-wrapper">
     <div className="p-4 border rounded  text-white h-100 shadow skill-card">
       <div className="mb-3">
