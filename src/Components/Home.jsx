@@ -40,7 +40,7 @@ return[
       {/* Features / Highlights */}
      <section className="row text-center g-4 my-5">
   <div className="col-md-4">
-    <div className="p-4 border rounded bg-gradient text-white h-100 shadow skill-card">
+    <div className="p-4 border rounded  text-white h-100 shadow skill-card">
       <div className="mb-3">
         <i className="bi bi-laptop fs-1"></i> {/* Bootstrap Icons */}
       </div>
@@ -49,7 +49,7 @@ return[
     </div>
   </div>
   <div className="col-md-4">
-    <div className="p-4 border rounded bg-gradient text-white h-100 shadow skill-card">
+    <div className="p-4 border rounded  text-white h-100 shadow skill-card">
       <div className="mb-3">
         <i className="bi bi-hdd-network fs-1"></i>
       </div>
@@ -58,7 +58,7 @@ return[
     </div>
   </div>
   <div className="col-md-4">
-    <div className="p-4 border rounded bg-gradient text-white h-100 shadow skill-card">
+    <div className="p-4 border rounded  text-white h-100 shadow skill-card">
       <div className="mb-3">
         <i className="bi bi-palette fs-1"></i>
       </div>
