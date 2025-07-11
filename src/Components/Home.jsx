@@ -38,8 +38,8 @@ return[
 
 
       {/* Features / Highlights */}
-     <section className="row text-center g-4 my-5 skills-wrapper">
-  <div className="col-md-4">
+     <section className="row text-center g-4 my-5">
+  <div className="col-md-4  skills-wrapper">
     <div className="p-4 border rounded  text-white h-100 shadow skill-card">
       <div className="mb-3">
         <i className="bi bi-laptop fs-1"></i> {/* Bootstrap Icons */}
@@ -48,7 +48,7 @@ return[
       <p className="text-white">React, Webflow, HTML, CSS, JavaScript</p>
     </div>
   </div>
-  <div className="col-md-4">
+  <div className="col-md-4  skills-wrapper">
     <div className="p-4 border rounded  text-white h-100 shadow skill-card">
       <div className="mb-3">
         <i className="bi bi-hdd-network fs-1"></i>
@@ -57,7 +57,7 @@ return[
       <p className="text-white">Node.js, Express, MongoDB</p>
     </div>
   </div>
-  <div className="col-md-4">
+  <div className="col-md-4  skills-wrapper">
     <div className="p-4 border rounded  text-white h-100 shadow skill-card">
       <div className="mb-3">
         <i className="bi bi-palette fs-1"></i>
