@@ -5,6 +5,7 @@
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+
 .home .btn-outline-light {
   background: linear-gradient(to right, #ff416c, #ff4b2b);
   border: none;
@@ -33,7 +34,7 @@
   opacity: 0; /* Start invisible */
 }
 .glow-grad {
-  padding: 20px 0;
+ 
   background: linear-gradient(
     90deg,
     rgba(255, 0, 150, 0.4),
@@ -52,7 +53,7 @@
     0 0 20px rgba(0, 255, 255, 0.5),
     0 0 30px rgba(0, 255, 255, 0.4);
   border-radius: 30px;
- 
+ padding: 20px 0;
   backdrop-filter: blur(10px);
 }
 
