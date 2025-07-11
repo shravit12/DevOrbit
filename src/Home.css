@@ -5,7 +5,7 @@
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .skill-card {
-  padding: 1.5rem;
+  padding: 0.5rem;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.05); /* Light glass effect */
   backdrop-filter: blur(12px);
