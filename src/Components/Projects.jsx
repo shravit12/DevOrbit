@@ -1,5 +1,5 @@
 import '../Project.css'
-import portimge from '../11670022.jpg'
+import portimge from '../gamox-ss.png'
 import ecomimage from '../6505894.jpg'
 import newsimge from '../22841.jpg'
 const projects = [
