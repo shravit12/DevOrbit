@@ -7,7 +7,7 @@ const projects = [
     title: 'Create A Game Website',
     description: 'A personal website built using React and Bootstrap to showcase my work and skills.',
     image: portimge,
-    link: 'https://your-portfolio-link.com',
+    link: 'https://gamox.vercel.app/',
     code: 'https://github.com/yourusername/portfolio'
   },
   {
