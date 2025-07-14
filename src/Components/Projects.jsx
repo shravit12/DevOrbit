@@ -8,7 +8,7 @@ const projects = [
     description: 'A personal website built using React and Bootstrap to showcase my work and skills.',
     image: portimge,
     link: 'https://gamox.vercel.app/',
-    code: 'https://github.com/yourusername/portfolio'
+    code: 'https://github.com/shravit12/Gamox.git'
   },
   {
     title: 'Saloon website',
