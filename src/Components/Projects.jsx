@@ -29,7 +29,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div className="col-md-4" key={index}>
             <div className="card bg-dark text-white h-100 shadow-sm">
-              <img src={project.image} className="card-img-top" alt={project.title} />
+              <img src={project.image} className="card-img-top object-fit-cover " alt={project.title} />
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{project.title}</h5>
                 <p className="card-text flex-grow-1">{project.description}</p>
