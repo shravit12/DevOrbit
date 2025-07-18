@@ -1,7 +1,7 @@
 import '../Project.css'
 import portimge from '../gamox-ss.png'
 import ecomimage from '../6505894.jpg'
-import newsimge from '../22841.jpg'
+import newsimge from '../saloon_img.jpg'
 const projects = [
   {
     title: 'Create A Game Website',
@@ -14,8 +14,8 @@ const projects = [
     title: 'Saloon website',
     description: 'A full-stack MERN store with product listings, cart, and Stripe payment integration.',
     image: ecomimage,
-    link: 'https://your-store-link.com',
-    code: 'https://github.com/yourusername/ecommerce-store'
+    link: 'https://glow-haus-nu.vercel.app/',
+    code: 'https://github.com/shravit12/GlowHaus.git'
   }
 
 ];
