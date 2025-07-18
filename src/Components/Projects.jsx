@@ -1,7 +1,7 @@
 import '../Project.css'
 import portimge from '../gamox-ss.png'
-import ecomimage from '../6505894.jpg'
-import newsimge from '../saloon_img.jpg'
+import ecomimage from '../saloon_img.jpg'
+
 const projects = [
   {
     title: 'Create A Game Website',
