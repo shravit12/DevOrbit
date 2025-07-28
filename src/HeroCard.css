@@ -1,0 +1,66 @@
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  perspective: 1000px;
+  background: radial-gradient(ellipse at center, #11111100 0%, #05050500 100%);
+  opacity: 0;
+  transform: translateX(-100%) rotateX(0deg) rotateY(0deg);
+  animation: slideInLeft 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotateX(0deg) rotateY(0deg);
+  }
+}
+.hero-card-3d {
+  width: 700px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(30, 30, 30, 0.9);
+  color: white;
+  box-shadow: 0 40px 80px rgba(0, 255, 200, 0.3),
+              inset 0 0 20px rgba(0, 255, 255, 0.2);
+  transition: transform 0.2s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  z-index: 2;
+  border: 2px solid rgba(0, 255, 255, 0.1);
+}
+
+.hero-title {
+  font-size: 3.9rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  background: transparent;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid #00ffe7;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background: #00ffe7;
+  color: #000;
+  box-shadow: 0 0 20px #00ffe7;
+  transform: scale(2.1);
+}
