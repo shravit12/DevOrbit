@@ -1,11 +1,33 @@
 import { useEffect, useState } from 'react';
 import '../Home.css';
 import { useNavigate } from 'react-router-dom';
-
+import '../HeroCard.css';
 const Home =({ setActiveSection })=>{
 const [animate, setAnimate] = useState(false);
 const navigate = useNavigate();
 
+  const cardRef = useRef();
+
+  const handleMouseMove = (e) => {
+    const card = cardRef.current;
+    const rect = card.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = -(y - centerY) / 20;
+    const rotateY = (x - centerX) / 20;
+
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+  };
+
+  const handleMouseLeave = () => {
+    const card = cardRef.current;
+    card.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
+  };
   useEffect(() => {
     setAnimate(true); // Trigger animation once when component mounts
   }, []);
@@ -13,28 +35,23 @@ const navigate = useNavigate();
 return[
     <div className="home container">
       {/* Hero Section */}
-     <section className="text-center my-5 glow-box position-relative overflow-hidden">
-  {/* Gradient Background Layer */}
-  <div className="glow-grad glow-box position-absolute top-0 start-0 w-100 h-100"></div>
-
-  {/* Text Content Layer */}
-  <div className="position-relative">
-    <h1
-      className={`display-4 glow-animate fw-bold text-light animated-text ${
-        animate ? 'animate-on-load' : ''
-      }`}
-    >
-      Hi, I'm Shravit 👋
-    </h1>
-    <p className="lead text-white">A passionate Full Stack Developer & Designer</p>
-    <button
-      className="btn btn-outline-light mt-3"
-      onClick={() => navigate('/projects')}
-    >
-      Explore My Work
-    </button>
-  </div>
-</section>
+    <section className="hero-container">
+      <div
+        className="hero-card-3d"
+        ref={cardRef}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      >
+        <h1 className="hero-title">Hi, I'm Shravit 👋</h1>
+        <p className="hero-subtitle">A passionate Full Stack Developer & Designer</p>
+        <button
+          className="hero-button"
+          onClick={() => navigate('/projects')}
+        >
+          Explore My Work
+        </button>
+      </div>
+    </section>
 
 
       {/* Features / Highlights */}
