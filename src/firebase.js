@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
  const firebaseConfig = {
-    apiKey: "AIzaSyAXvWLc1hvdqApVRdH6W_Ebn7yib7KOFek",
+     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: "my-portfolio-app-43918.firebaseapp.com",
     projectId: "my-portfolio-app-43918",
     storageBucket: "my-portfolio-app-43918.firebasestorage.app",
@@ -17,3 +17,4 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);      
 export const storage = getStorage(app); 
+
